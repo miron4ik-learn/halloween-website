@@ -64,3 +64,29 @@ const newSwiper = new Swiper('.new-swiper', {
   spaceBetween: 16,
   loop: true,
 })
+
+
+
+// Scroll Section Active Link
+
+const sections = document.querySelectorAll('section[id]')
+
+const scrollActive = () => {
+  const scrollY = window.scrollY
+
+  sections.forEach(section => {
+    const sectionHeight = section.offsetHeight,
+          sectionTop    = section.offsetTop - 50,
+          sectionId     = section.getAttribute('id')
+
+    const navLink = document.querySelector(`.nav__link[href*=${sectionId}]`)
+
+    if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      navLink.classList.add('nav__link--active')
+    } else {
+      navLink.classList.remove('nav__link--active')
+    }
+  })
+}
+
+window.addEventListener('scroll', scrollActive)

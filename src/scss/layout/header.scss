@@ -64,6 +64,18 @@
     &:hover {
       color: var(--text-color);
     }
+
+    &--active {
+      position: relative;
+
+      @include pseudo-before {
+        size: 5px;
+        border-radius: 50%;
+        background: var(--title-color);
+      
+        @include position (absolute, $b: -.75rem, $l: 45%);
+      }
+    }
   }
 }
 
