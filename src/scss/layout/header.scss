@@ -5,6 +5,10 @@
   background: var(--body-color);
 
   @include position (fixed, $t: 0, $l: 0, $z: z('fixed'));
+
+  &--scroll {
+    background: var(--container-color);
+  }
 }
 
 

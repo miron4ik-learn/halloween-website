@@ -37,3 +37,19 @@ const homeSwiper = new Swiper('.home-swiper', {
     clickable: true,
   },
 })
+
+
+
+// Change BG Header
+
+const scrollHeader = () => {
+  const header = document.getElementById('header')
+
+  if(window.scrollY >= 50) {
+    header.classList.add('header--scroll')
+  } else {
+    header.classList.remove('header--scroll')
+  }
+}
+
+window.addEventListener('scroll', scrollHeader)
