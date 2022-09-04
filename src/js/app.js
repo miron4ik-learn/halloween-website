@@ -90,3 +90,19 @@ const scrollActive = () => {
 }
 
 window.addEventListener('scroll', scrollActive)
+
+
+
+// Show Scroll Up
+
+const scrollUp = () => {
+  const scrollUp = document.getElementById('scroll-up')
+  
+  if(window.scrollY >= 460) {
+    scrollUp.classList.add('scrollup--show')
+  } else {
+    scrollUp.classList.remove('scrollup--show')
+  }
+}
+
+window.addEventListener('scroll', scrollUp)

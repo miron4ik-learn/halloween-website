@@ -1,0 +1,27 @@
+// Scrollup
+
+.scrollup {
+  display: inline-flex;
+  padding: .3rem;
+  border-radius: .25rem;
+  background: var(--container-color);
+  
+  opacity: .8;
+  transition: .4s;
+
+  @include position (fixed, $b: -20%, $r: 1rem, $z: z('tooltip'));
+
+  &:hover {
+    background: var(--container-color);
+    opacity: 1;
+  }
+
+  &--show {
+    bottom: 3rem;
+  }
+
+  &__icon {
+    font-size: 1.25rem;
+    color: var(--title-color);
+  }
+}
