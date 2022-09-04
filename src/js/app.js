@@ -53,3 +53,14 @@ const scrollHeader = () => {
 }
 
 window.addEventListener('scroll', scrollHeader)
+
+
+
+// New Swiper
+
+const newSwiper = new Swiper('.new-swiper', {
+  centeredSlides: true,
+  slidesPerView: 'auto',
+  spaceBetween: 16,
+  loop: true,
+})
