@@ -1,0 +1,61 @@
+// Trick
+
+.trick {
+  &__container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+
+    padding-top: 1rem;
+  }
+
+  &__content {
+    position: relative;
+    padding: 1.5rem 0 1rem;
+    background: var(--container-color);
+    border-radius: 1rem;
+    text-align: center;
+    overflow: hidden;
+
+    &:hover {
+      .trick__img {
+        transform: translateY(-.5rem);
+      }
+
+      .trick__btn {
+        right: 0;
+      }
+    }
+  }
+
+  &__img {
+    width: 90px;
+    transition: .3s;
+  }
+
+  &__subtitle, &__price {
+    display: block;
+  }
+
+  &__title, &__price {
+    font-weight: var(--font-medium);
+    font-size: var(--normal-font);
+    color: var(--title-color);
+  }
+
+  &__subtitle {
+    margin-bottom: var(--mb-0-5);
+    font-size: var(--smaller-font);
+  }
+
+  &__btn {
+    display: inline-flex;
+    padding: .5rem;
+    border-radius: .25rem .25rem .75rem .25rem;
+
+    @include position (absolute, $r: -3rem, $b: 0);
+  }
+
+  &__icon {
+    color: var(--title-color);
+  }
+}
