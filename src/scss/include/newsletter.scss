@@ -29,3 +29,29 @@
     }
   }
 }
+
+
+
+// Newsletter Media
+
+@include min-width ('medium', $media-type: screen) {
+  .newsletter {
+    &__container {
+      display: grid;
+      grid-template-columns: .7fr;
+      justify-content: center;
+    }
+
+    &__description {
+      padding: 0 3rem;
+    }
+  }
+}
+
+@include min-width ('laptop', $media-type: screen) {
+  .newsletter {
+    &__container {
+      grid-template-columns: .5fr;
+    }
+  }
+}

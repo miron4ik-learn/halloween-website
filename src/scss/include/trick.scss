@@ -59,3 +59,46 @@
     color: var(--title-color);
   }
 }
+
+
+
+// Trick Media
+
+@include max-width ('small', $media-type: 'screen') {
+  .trick {
+    &__container {
+      grid-template-columns: .8fr;
+      justify-content: center;
+    }
+  }
+}
+
+@include min-width ('laptop', $media-type: screen) {
+  .trick {
+    &__container {
+      grid-template-columns: repeat(3, 200px);
+      justify-content: center;
+      gap: 2rem;
+    }
+  }
+}
+
+@include min-width ('large', $media-type: screen) {
+  .trick {
+    &__container {
+      gap: 3.5rem;
+    }
+
+    &__content {
+      border-radius: 1.5rem;
+    }
+
+    &__img {
+      width: 110px;
+    }
+
+    &__title {
+      font-size: var(--h3-font);
+    }
+  }
+}

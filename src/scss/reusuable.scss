@@ -3,10 +3,19 @@
 .section {
   padding: 4.5rem 0 2rem;
 
+  @include min-width ('laptop', $media-type: screen) {
+    padding: 7rem 0 2rem;
+  }
+
   &__title {
     margin-bottom: var(--mb-2);
     text-align: center;
     font-size: var(--h2-font);
+
+    @include min-width ('large', $media-type: screen) {
+      margin-bottom: 3rem;
+      font-size: var(--h1-font);
+    }
   }
 }
 
@@ -17,6 +26,14 @@
 .container {
   max-width: 968px;
   margin: 0 var(--mb-1-5);
+
+  @include max-width ('small', $media-type: 'screen') {
+    margin: 0 var(--mb-1);
+  }
+
+  @include min-width ('large', $media-type: screen) {
+    @include center-block;
+  }
 }
 
 

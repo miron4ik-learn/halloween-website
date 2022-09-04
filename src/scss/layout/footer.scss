@@ -98,3 +98,49 @@
     font-size: var(--smaller-font);
   }
 }
+
+
+
+// Footer Media
+
+@include min-width ('laptop', $media-type: screen) {
+  .footer {
+    &__container {
+      grid-template-columns: repeat(4, 1fr);
+      justify-content: center;
+      column-gap: 1rem;
+    }
+
+    &__img {
+      &__two {
+        right: initial;
+        bottom: 0;
+        left: 15%;
+      }
+    }
+  }
+}
+
+@include min-width ('large', $media-type: screen) {
+  .footer {
+    &__copy {
+      margin-top: 6rem;
+    }
+  }
+}
+
+@include min-width ('desktop', $media-type: screen) {
+  .footer {
+    &__img {
+      &__one {
+        width: 120px;
+      }
+
+      &__two {
+        width: 180px;
+        top: 30%;
+        left: -3%;
+      }
+    }
+  }
+}

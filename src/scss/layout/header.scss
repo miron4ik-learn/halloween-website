@@ -101,3 +101,27 @@
     }
   }
 }
+
+
+
+// Nav Media
+
+@include min-width ('laptop', $media-type: screen) {
+  .nav {
+    height: calc(var(--header-height) + 1.5rem);
+
+    &__img, &__close, &__open {
+      display: none;
+    }
+
+    &__list {
+      flex-direction: row;
+      column-gap: 3rem;
+    }
+
+    &__link {
+      text-transform: capitalize;
+      font-weight: initial;
+    }
+  }
+}

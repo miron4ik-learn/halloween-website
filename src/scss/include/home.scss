@@ -62,3 +62,87 @@
     justify-content: space-between;
   }
 }
+
+
+
+// Home Media
+
+@include max-width ('small', $media-type: 'screen') {
+  .home {
+    &__img {
+      height: 200px;
+    }
+
+    &__buttons {
+      width: max-content;
+      flex-direction: column;
+      row-gap: 1rem;
+    }
+  }
+}
+
+@include min-width ('laptop', $media-type: screen) {
+  .home {
+    &__content {
+      padding: 8rem 0 2rem;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 4rem;
+    }
+
+    &__img {
+      height: 300px;
+    }
+  }
+}
+
+@include min-width ('large', $media-type: screen) {
+  .home {
+    &__content {
+      padding-top: 9rem;
+      gap: 3rem;
+    }
+
+    &__group {
+      padding-top: 0;
+    }
+
+    &__img {
+      height: 400px;
+      transform: translateY(-3rem);
+    }
+
+    &__indicator {
+      top: initial;
+      right: initial;
+      bottom: 15%;
+      left: 45%;
+
+      &::after {
+        top: 0;
+        height: 75px;
+      }
+    }
+
+    &__details {
+      bottom: 0;
+      right: 58%;
+    }
+
+    &__title {
+      margin-bottom: var(--mb-1-5);
+    }
+
+    &__description {
+      margin-bottom: var(--mb-2-5);
+      padding-right: 2rem;
+    }
+  }
+}
+
+@include min-width ('desktop', $media-type: screen) {
+  .home {
+    &__img {
+      height: 420px;
+    }
+  }
+}

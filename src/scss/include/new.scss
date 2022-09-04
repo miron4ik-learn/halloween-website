@@ -78,3 +78,29 @@
     @include position (absolute, $b: 0, $r: -3rem);
   }
 }
+
+
+
+// New Media
+
+@include min-width ('large', $media-type: screen) {
+  .new {
+    &__content {
+      width: 310px;
+      padding: 2rem 0;
+      border-radius: 1rem;
+    }
+
+    &__img {
+      width: 150px;
+    }
+    
+    &__img, &__subtitle {
+      margin-bottom: var(--mb-1);
+    }
+
+    &__title {
+      font-size: var(--h3-font);
+    }
+  }
+}

@@ -24,3 +24,37 @@
     margin-bottom: var(--mb-0-25);
   }
 }
+
+
+
+// Category Media
+
+@include max-width ('small', $media-type: 'screen') {
+  .category {
+    &__container {
+      grid-template-columns: .8fr;
+      justify-content: center;
+    }
+  }
+}
+
+@include min-width ('laptop', $media-type: screen) {
+  .category {
+    &__container {
+      grid-template-columns: repeat(3, 200px);
+      justify-content: center;
+    }
+  }
+}
+
+@include min-width ('large', $media-type: screen) {
+  .category {
+    &__container {
+      column-gap: 8rem;
+    }
+
+    &__img {
+      width: 200px;
+    }
+  }
+}
