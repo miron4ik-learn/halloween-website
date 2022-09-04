@@ -1,1 +1,26 @@
-// Libs
+// Swiper CSS
+@import '~swiper/swiper-bundle';
+
+.swiper-pagination {
+  position: initial;
+  margin-top: var(--mb-1);
+
+  &-bullet {
+    size: 5px;
+    background: var(--title-color);
+    opacity: 1;
+
+    transition: .2s;
+
+    &-active {
+      width: 1.5rem;
+      border-radius: .5rem;
+    }
+  }
+
+  &-horizontal {
+    &.swiper-pagination-bullets .swiper-pagination-bullet {
+      margin: 0 .5rem;
+    }
+  }
+}

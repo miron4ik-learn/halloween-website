@@ -1,3 +1,7 @@
+import Swiper, { Pagination } from 'swiper'
+
+
+
 // Show Menu
 
 const navMenu  = document.getElementById('nav-menu'),
@@ -19,3 +23,17 @@ navClose.addEventListener('click', () => {
 const navLink = document.querySelectorAll('.nav__link')
 const linkAction = () => navMenu.classList.remove('nav__menu--show')
 navLink.forEach(l => l.addEventListener('click', linkAction))
+
+
+
+// Home Swiper
+
+const homeSwiper = new Swiper('.home-swiper', {
+  modules: [ Pagination ],
+  spaceBetween: 30,
+  loop: true,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+})

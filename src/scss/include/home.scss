@@ -1,0 +1,64 @@
+// Home
+
+.home {
+  &__content {
+    row-gap: 1rem;
+  }
+
+  &__group {
+    position: relative;
+    display: grid;
+    padding-top: 2rem;
+  }
+
+  &__img {
+    height: 250px;
+    justify-self: center;
+  }
+
+  &__indicator {
+    size: 8px;
+    border-radius: 50%;
+    background: var(--title-color);
+
+    @include position (absolute, $t: 7rem, $r: 2rem);
+
+    @include pseudo-after {
+      size: 1px 48px;
+      background: inherit;
+    
+      @include position (absolute, $t: -3rem, $r: 45%);
+    }
+  }
+
+  &__details {
+    @include position (absolute, $r: .5rem);
+
+    &__title, &__subtitle {
+      display: block;
+      text-align: right;
+      font-size: var(--small-font);
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: var(--mb-1);
+    text-transform: uppercase;
+    font-size: var(--h3-font);
+  }
+
+  &__title {
+    margin-bottom: var(--mb-1);
+    font-weight: var(--font-black);
+    font-size: var(--biggest-font) / 1.09;
+  }
+
+  &__description {
+    margin-bottom: var(--mb-1);
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,38 @@
+// Button
+
+.btn {
+  display: inline-block;
+  border-radius: .5rem;
+  padding: 1rem 1.75rem;
+  background: var(--primary-color);
+
+  font-weight: var(--font-medium);
+  color: var(--title-color);
+
+  transition: .3s;
+
+  &:hover {
+    background: var(--alt-color);
+  }
+
+  &__icon {
+    font-size: 1.25rem;
+  }
+
+  &--ghost {
+    padding: .75rem 1.5rem;
+    border: 2px solid;
+    border-radius: 3rem;
+    background: transparent !important;
+  }
+
+  &--link {
+    color: var(--title-color);
+  }
+
+  &--flex {
+    display: inline-flex;
+    align-items: center;
+    column-gap: .5rem;
+  }
+}
