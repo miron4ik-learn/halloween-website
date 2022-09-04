@@ -1,0 +1,31 @@
+// Newsletter
+
+.newsletter {
+  &__description {
+    margin-bottom: var(--mb-1-5);
+    text-align: center;
+  }
+
+  &__form {
+    padding: 1rem;
+    border-radius: .75rem;
+    background: var(--container-color);
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__input {
+    width: 70%;
+    padding: 0 .5rem;
+    background: none;
+
+    font-size: var(--small-font);
+    color: var(--title-color);
+
+    @include placeholder {
+      color: var(--title-color);
+      opacity: 1;
+    }
+  }
+}
